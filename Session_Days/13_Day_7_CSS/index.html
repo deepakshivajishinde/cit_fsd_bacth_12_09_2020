@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .menu__list__item {
+        list-style: none;
+        border: 1px solid black;
+        display: inline-block;
+        padding: 2px 5px;
+        background-color: rgb(118, 235, 190);
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      .menu__list {
+        display: inline-block;
+        padding: 5px 5px;
+      }
+      .menu {
+        background-color: darkgoldenrod;
+      }
+      .menu__brand {
+        display: inline-block;
+        padding-left: 10px;
+        /* border: 1px solid white; */
+        /* margin-top: 5px; */
+      }
+      .menu__brand_title {
+        display: inline;
+        color: wheat;
+        font-size: 25px;
+      }
+      .introduction {
+        background-color: tomato;
+        height: 200px;
+        width: 50%;
+        display: inline-block;
+      }
+      .introduction-1 {
+        background-color: yellow;
+        height: 200px;
+        width: 50%;
+        margin-left: -4px;
+        display: inline-block;
+      }
+      .work {
+        margin-top: -4px;
+      }
+      .work__item {
+        width: 25%;
+        height: 100px;
+        display: inline-block;
+      }
+      .manage-block {
+        margin-left: -4px;
+      }
+      .bg-red {
+        background-color: red;
+      }
+      .bg-gray {
+        background-color: gray;
+      }
+      .bg-green {
+        background-color: green;
+      }
+      .bg-violet {
+        background-color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <header>
+        <nav class="menu">
+          <div class="menu__brand">
+            <h1 class="menu__brand_title">CSS</h1>
+          </div>
+          <ul class="menu__list">
+            <li class="menu__list__item">Home</li>
+            <li class="menu__list__item">About-Us</li>
+            <li class="menu__list__item">Contact Us</li>
+            <li class="menu__list__item">Our Team</li>
+          </ul>
+        </nav>
+      </header>
+      <section>
+        <article class="introduction"></article>
+        <article class="introduction-1"></article>
+      </section>
+      <section class="work">
+        <article class="work__item bg-red"></article>
+        <article class="work__item manage-block bg-gray"></article>
+        <article class="work__item manage-block bg-green"></article>
+        <article class="work__item manage-block bg-violet"></article>
+      </section>
+    </div>
+  </body>
+</html>
