@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 1700px;
+      }
+      .grand-parent {
+        margin-top: 30px;
+        width: 500px;
+        height: 500px;
+        background-color: greenyellow;
+        position: relative;
+      }
+      .parent {
+        margin-top: 100px;
+        width: 400px;
+        height: 400px;
+        background-color: red;
+        position: relative;
+      }
+      .div-1 {
+        width: 300px;
+        height: 100px;
+        background-color: violet;
+      }
+      .div-2 {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        background-color: turquoise;
+        position: absolute;
+        top: -25px;
+        right: -25px;
+        /* bottom: 0px; */
+      }
+      .div-2 p {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grand-parent">
+      <div class="parent">
+        <div class="div-1"></div>
+        <div class="div-2">
+          <p>X</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
