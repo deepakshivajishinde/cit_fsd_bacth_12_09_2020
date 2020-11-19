@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = "2";
+      var b = 3;
+      a = parseInt(a);
+      /*var add = a + b;
+      var sub = a - b;
+      console.log(add);
+      console.log(sub);*/
+      function addNumbers(a1, b1) {
+        var add = a1 + b1;
+        console.log("Addition:" + add);
+        subNumbers(add, a1, b1);
+      }
+
+      function subNumbers(add1, a2, b2) {
+        var sub = add1 + a2 - b2;
+        console.log("Subtraction:" + sub);
+      }
+
+      function complex(a, b) {
+        addNumbers(a, b);
+      }
+      complex(a, b);
+      //subNumbers(a, b);
+    </script>
+  </body>
+</html>

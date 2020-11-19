@@ -1,0 +1,21 @@
+@import "./include/_bg-color.css";
+@import "./include/_borders.css";
+
+body {
+  background-color: gray;
+}
+.parent {
+  width: 100%;
+}
+.inner-div {
+  display: inline-block;
+  height: 100px;
+  width: 45%;
+  background-color: red;
+  margin: 2px;
+}
+@media all and (min-width: 600px) {
+  body {
+    background-color: white;
+  }
+}

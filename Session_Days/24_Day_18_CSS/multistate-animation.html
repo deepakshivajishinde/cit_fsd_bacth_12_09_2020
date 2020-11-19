@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      .box {
+        width: 150px;
+        height: 150px;
+        background-color: red;
+        border-radius: 150px;
+      }
+
+      .animate-1 {
+        display: none;
+        animation-name: moveBlock;
+        animation-duration: 5s;
+        animation-fill-mode: forwards;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: alternate;
+        animation-timing-function: cubic-bezier(0, 1.54, 0.84, 0.6);
+      }
+
+      .animate-2 {
+        animation-name: moveBlock;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        animation-timing-function: linear;
+      }
+
+      @keyframes moveBlock {
+        0% {
+          transform: translate(0px, 0px);
+          background-color: red;
+        }
+
+        50% {
+          transform: translate(300px, 150px);
+        }
+
+        100% {
+          transform: translate(0px, 300px);
+          background-color: rgb(15, 1, 1);
+        }
+      }
+
+      /*@keyframes moveBlock {
+        form {
+          transform: translateY(0px);
+          background-color: red;
+        }
+
+        to {
+          transform: translateY(300px);
+          background-color: rgb(15, 1, 1);
+        }
+      }*/
+    </style>
+  </head>
+  <body>
+    <div class="box animate-1"></div>
+    <div class="box animate-2"></div>
+  </body>
+</html>

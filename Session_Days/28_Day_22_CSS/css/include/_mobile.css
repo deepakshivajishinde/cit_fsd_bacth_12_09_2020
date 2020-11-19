@@ -1,0 +1,11 @@
+@media all and (max-width: 600px) {
+  body {
+    background-color: white;
+  }
+  .inner-div {
+    width: 100%;
+  }
+  .btn {
+    display: none;
+  }
+}

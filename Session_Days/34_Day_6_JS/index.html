@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = 5;
+      var b = 5;
+      /*function add(a, b) {
+        var add = a + b;
+        return add;
+      }*/
+
+      /* function sub(add) {
+        var number = 5;
+        return add - number;
+      }*/
+
+      /*var result = sub(add(a, b));
+      console.log(result);*/
+
+      function fun1(a1) {
+        var value = 3;
+        a1(value);
+      } //common function
+
+      /* var fun = function (a) {
+        return a * a;
+      }; //Anonymous function*/
+
+      fun1(function (a) {
+        console.log(a);
+      });
+    </script>
+  </body>
+</html>

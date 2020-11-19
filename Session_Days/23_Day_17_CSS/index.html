@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      .box {
+        width: 150px;
+        height: 150px;
+        background-color: red;
+        animation-name: moveBlock;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-delay: 0s;
+        border-radius: 150px;
+        animation-iteration-count: 10;
+      }
+
+      @keyframes moveBlock {
+        form {
+          transform: translateX(00px);
+        }
+
+        to {
+          transform: translateX(500px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

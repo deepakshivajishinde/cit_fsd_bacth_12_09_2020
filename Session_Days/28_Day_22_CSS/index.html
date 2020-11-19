@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a {
+        transition: color 0.3s, background-color 0.3s;
+      }
+      a:link {
+        text-decoration: none;
+        color: green;
+        font-weight: bold;
+      }
+      a:hover {
+      }
+      a:visited {
+        color: grey;
+      }
+
+      a:active {
+        background-color: red;
+        /* font-style: italic; */
+        color: white;
+      }
+
+      .input {
+        border: 2px solid black;
+        outline: 0px;
+        /* display: block; */
+        margin: 5px 0px;
+      }
+      .input:focus + label {
+        /* border: 2px solid gray; */
+        color: red;
+      }
+      .input:valid + label {
+        color: rgb(65, 252, 65);
+      }
+      /* input:invalid {
+        background-color: rgb(245, 141, 133);
+      } */
+      input:disabled {
+        background-color: rgb(209, 205, 205);
+        border: 1px dotted black;
+        font-style: italic;
+      }
+      input:read-only,
+      input:-moz-read-only,
+      input:-ms-read-only {
+        background-color: tomato;
+        border: 0px;
+        text-transform: uppercase;
+        color: white;
+        border-radius: 5px;
+        padding: 2px;
+      }
+
+      ul {
+        list-style: none;
+      }
+      ul > li {
+        border: 1px solid red;
+        background-color: yellow;
+        font-weight: bold;
+      }
+      ul > li:first-child {
+        background-color: gray;
+        color: white;
+      }
+
+      ul > li:last-child {
+        background-color: rgb(139, 0, 0);
+        color: white;
+      }
+
+      ul > li:nth-child(odd) {
+        background-color: rgb(139, 0, 0);
+        color: white;
+      }
+
+      input[type="checkbox"] + label,
+      input[type="radio"] + label {
+        color: red;
+      }
+
+      input[type="checkbox"]:checked + label,
+      input[type="radio"]:checked + label {
+        color: green;
+        font-style: italic;
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <input type="checkbox" />
+      <label for="">Basic CSS</label>
+    </div>
+    <div>
+      <input type="checkbox" />
+      <label for="">Basic CSS</label>
+    </div>
+    <div>
+      <input type="radio" name="r" />
+      <label for="">Basic CSS</label>
+    </div>
+    <div>
+      <input type="radio" name="r" />
+      <label for="">Basic CSS</label>
+    </div>
+    <div>
+      <input type="radio" name="r" />
+      <label for="">Basic CSS</label>
+    </div>
+
+    <div>
+      <input class="input" type="email" required />
+      <label for="">input</label>
+    </div>
+    <!-- <a href="#five">CLICK HERE</a>
+
+    <input class="input" type="email" required />
+    <label for="">Basic CSS</label>
+    <input class="input" type="number" required />
+    <input class="input" type="text" required />
+    <input class="input" type="text" required />
+    <input class="input" type="text" required />
+    <input class="input" type="text" disabled value="basic css" />
+    <input class="input" type="text" readonly value="basic css" /> -->
+
+    <!-- <ul>
+      <li>HOME</li>
+      <li>HOME</li>
+      <li>HOME</li>
+      <li>HOME</li>
+      <li>HOME</li>
+      <li>HOME</li>
+      <li>HOME</li>
+      <li>HOME</li>
+      <li>HOME</li>
+      <li>HOME</li>
+    </ul> -->
+  </body>
+</html>

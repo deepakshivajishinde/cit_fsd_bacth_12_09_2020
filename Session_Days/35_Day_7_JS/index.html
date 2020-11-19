@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var var1 = 2;
+      var var2 = 3;
+      function commonFunction(a, b, callback) {
+        a = a * b;
+        callback(a);
+      }
+
+      /*var anonymousFunction = function () {
+        console.log(2);
+      };*/
+
+      commonFunction(var1, var2, function (result) {
+        console.log(result * 3.14);
+      });
+
+      commonFunction(var1, var2, function (result) {
+        console.log(result + 3.14);
+      });
+
+      commonFunction(var1, var2, function (result) {
+        console.log(result - 3.14);
+      });
+      /*function () {
+        console.log(2);
+      }*/
+    </script>
+  </body>
+</html>

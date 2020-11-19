@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var loginDetails = "client";
+      var authorization = "slave";
+
+      if (loginDetails == "admin" && authorization == "master") {
+        console.log("Yes He is an admin with master");
+      } else {
+        if (loginDetails == "admin" && authorization == "slave") {
+          console.log("Yes He is an admin with slave");
+        } else {
+          console.log("No He is not an admin");
+        }
+      }
+    </script>
+  </body>
+</html>

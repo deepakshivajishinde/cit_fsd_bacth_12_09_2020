@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        width: 200px;
+        height: 400px;
+        border: 3px solid black;
+        margin: auto;
+        margin-top: 10vh;
+        position: relative;
+        overflow: hidden;
+      }
+      .main .door {
+        height: inherit;
+        width: inherit;
+        /* display: none; */
+        cursor: pointer;
+      }
+      .door img {
+        height: inherit;
+        width: inherit;
+      }
+      .door:hover {
+        animation-name: openDoor;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+      }
+      .garden {
+        position: absolute;
+        top: 0px;
+        height: inherit;
+        width: inherit;
+        z-index: -1;
+        animation: moveGarden 3s alternate infinite ease-in-out;
+      }
+      .garden img {
+        height: inherit;
+      }
+
+      @keyframes moveGarden {
+        0% {
+          transform: translateX(0px);
+        }
+        100% {
+          transform: translateX(-300px);
+        }
+      }
+      @keyframes openDoor {
+        0% {
+          transform-origin: right;
+          transform: perspective(800px) rotateY(0deg);
+        }
+        100% {
+          transform-origin: right;
+          transform: perspective(800px) rotateY(-90deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="door">
+        <img src="data/door.jpg" alt="" />
+      </div>
+      <div class="garden">
+        <img src="data/backgrounf.jpg" alt="" />
+      </div>
+    </div>
+  </body>
+</html>

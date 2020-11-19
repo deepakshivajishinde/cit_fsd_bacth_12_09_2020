@@ -1,0 +1,13 @@
+body {
+  background-color: cadetblue;
+}
+.parent {
+  width: 100%;
+}
+.inner-div {
+  display: inline-block;
+  height: 100px;
+  width: 45%;
+  background-color: brown;
+  margin: 2px;
+}
