@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <h1>HTML</h1>
+    <h1>JS</h1>
+    <div>
+      <h1>DIV</h1>
+    </div>
+
+    <script>
+      // var array = [1, 2, 3, 5, 3];
+      var h1 = document.getElementsByTagName("h1")[3];
+      var htmlText = h1.innerHTML;
+
+      h1.innerHTML = "Umesh";
+
+      console.log(typeof htmlText);
+      console.log(htmlText);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      table {
+        margin-top: 20px;
+        width: 75%;
+        text-align: center;
+        border-collapse: collapse;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <table>
+    <thead>
+      <tr>
+        <th>Sr No</th>
+        <th>Name</th>
+        <th>Mobile</th>
+        <th>Is Student</th>
+        <th>Marks</th>
+      </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+  <body>
+    <script>
+      // var array = new Array();
+      var studentArray = [];
+      var tbody = document.getElementById("tbody");
+      // var obj = new Object();
+
+      studentArray = [
+        {
+          name: "Monali",
+          mobile: 8007070845,
+          is_student: true,
+          marks: 85.45,
+        },
+      ];
+
+      //var newStudentName = inputStudentName.value
+      var newStudent = {
+        name: "Umesh",
+        mobile: 9921459640,
+        is_student: false,
+        marks: 89.45,
+      };
+
+      studentArray.push(newStudent);
+      var _tr = "";
+      studentArray.forEach(function (value, index) {
+        _tr += `<tr>
+                    <td>${index + 1}</td>
+                    <td>${value.name}</td>
+                    <td>${value.mobile}</td>
+                    <td>${value.is_student == true ? "Yes" : "No"}</td>
+                    <td>${value.marks}</td>
+                </tr>`;
+      });
+      tbody.innerHTML = _tr;
+    </script>
+  </body>
+</html>

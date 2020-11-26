@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="change-text">Hello</h1>
+    <h1>HTML</h1>
+    <h1>JS</h1>
+    <div class="change-text">
+      <h1>DIV</h1>
+    </div>
+    <p class="change-text">Paragraph</p>
+
+    <div id="div-1-id"></div>
+    <form action="">
+      <input type="text" value="Nikhil" id="input-id-1" />
+    </form>
+    <button>CLICK</button>
+    <script>
+      var input = document.getElementById("input-id-1");
+
+      function changeText() {
+        input.value = "1234";
+      }
+      changeText();
+      // var array = [1, 2, 3, 5, 3];
+
+      /* var h1 = document.getElementsByTagName("h1");
+      var classData = document.getElementsByClassName("change-text");
+      var divData = document.getElementById("div-1-id");
+      divData.innerHTML = "<h1>Hello To HTML</h1>";
+      setTimeout(function () {
+        for (let index = 0; index < classData.length; index++) {
+          classData[index].innerHTML = "Om Sai";
+        }
+      }, 3000);*/
+    </script>
+  </body>
+</html>

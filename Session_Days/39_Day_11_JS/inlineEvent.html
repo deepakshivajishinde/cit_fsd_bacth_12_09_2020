@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="change-text">Paragraph</p>
+    <form action="">
+      <input type="text" value="Nikhil" id="input-id-1" name="Username" />
+      <button onclick="changeText(this,event)">CLICK</button>
+      <br />
+      <input type="text" onkeyup="onKeyPress(this,event,'Hello')" />
+    </form>
+    <script>
+      var input = document.getElementById("input-id-1");
+      var p = document.getElementsByClassName("change-text")[0];
+
+      function changeText(_this, event) {
+        event.preventDefault();
+        _this.innerText = "Edit";
+        p.innerHTML = input.value;
+      }
+
+      function onKeyPress(_this, event, name) {
+        console.log(name);
+        p.innerHTML = _this.value;
+      }
+    </script>
+  </body>
+</html>
