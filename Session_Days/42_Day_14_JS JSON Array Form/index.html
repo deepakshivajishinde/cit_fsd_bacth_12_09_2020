@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      table {
+        margin-top: 20px;
+        width: 75%;
+        text-align: center;
+        border-collapse: collapse;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid;
+      }
+      div {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>Student Registration</legend>
+
+        <div>
+          <input type="text" placeholder="Student Name" id="idStudentName" />
+        </div>
+        <div>
+          <input
+            type="text"
+            placeholder="Student Mobile"
+            id="idStudentMobileNo"
+          />
+        </div>
+        <div>
+          <label for="">Is a Student</label>
+          <input
+            type="radio"
+            placeholder=""
+            name="isAStudent"
+            id="isAStudentY"
+          />
+          <label for="isAStudentY">Yes </label>
+          <input
+            type="radio"
+            placeholder=""
+            name="isAStudent"
+            id="isAStudentN"
+            checked
+          />
+          <label for="isAStudentN">No</label>
+        </div>
+        <div>
+          <input type="number" id="idStudentMarks" />
+        </div>
+        <div>
+          <button id="idBtnAddStudent">Add A Student</button>
+        </div>
+      </fieldset>
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>Sr No</th>
+          <th>Name</th>
+          <th>Mobile</th>
+          <th>Is Student</th>
+          <th>Marks</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <script>
+      var studentArray = [];
+      var tbody = document.getElementById("tbody");
+
+      var studentName = document.getElementById("idStudentName");
+      var studentMobileNo = document.getElementById("idStudentMobileNo");
+      var isAStudentY = document.getElementById("isAStudentY");
+      var isAStudentN = document.getElementById("isAStudentN");
+      var studentMarks = document.getElementById("idStudentMarks");
+      var btnAddStudent = document.getElementById("idBtnAddStudent");
+
+      studentArray = [];
+
+      btnAddStudent.addEventListener("click", function (event) {
+        event.preventDefault();
+        var newStudent = {
+          name: studentName.value,
+          mobile: studentMobileNo.value,
+          is_student: "",
+          marks: studentMarks.value,
+        };
+        console.log(isAStudentY.checked);
+        if (isAStudentY.checked === true) {
+          newStudent.is_student = true;
+        } else {
+          newStudent.is_student = false;
+        }
+        studentArray.push(newStudent);
+        printStudent(function () {
+          studentName.value = "";
+          studentMobileNo.value = "";
+          isAStudentN.checked = true;
+          studentMarks.value = "";
+        });
+      });
+      function printStudent(callback) {
+        var _tr = "";
+        if (studentArray.length == 0) {
+          _tr += `<tr>
+                    <td colspan="5">----No Student Found---</td>
+                </tr>`;
+        } else {
+          studentArray.forEach(function (value, index) {
+            _tr += `<tr>
+                    <td>${index + 1}</td>
+                    <td>${value.name}</td>
+                    <td>${value.mobile}</td>
+                    <td>${value.is_student == true ? "Yes" : "No"}</td>
+                    <td>${value.marks}</td>
+                </tr>`;
+          });
+        }
+        tbody.innerHTML = _tr;
+        callback();
+      }
+      printStudent(function () {});
+    </script>
+  </body>
+</html>
