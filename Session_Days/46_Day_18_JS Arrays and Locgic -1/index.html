@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const array = [1, 1, 7.8, 3, "a", "b", 1.5, 7.8, 1];
+      /*const array = [
+         {
+           id: 1,
+           name: "Nikhil",
+         },
+         {
+           id: 2,
+           name: "Umesh",
+         },
+       ];*/
+      //console.log(array.length);
+      //array.push(1, "z", 5.5);
+      // array.unshift(100);
+      //array.splice(2, 0, 200, 12, "monali");
+
+      //array.indexOf(1.5);
+      //array.lastIndexOf("a");
+
+      //var index = array.includes(1);
+      //console.log(index);
+
+      //array.pop();
+      //array.shift();
+      //array.splice(4, 2);
+
+      //array = [];
+      //array.length = 0;
+      //array.splice(0, array.length);
+      //while (array.length > 0) array.pop();
+
+      //var value = array.includes(1);
+      var s_id = 7.8;
+      var value = array.find(function (element) {
+        return element == s_id;
+      });
+
+      /// var value = array.find((element) => element.id == s_id);
+
+      console.log(value);
+    </script>
+  </body>
+</html>

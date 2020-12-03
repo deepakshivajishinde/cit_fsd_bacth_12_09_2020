@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var array = [1, 1, 7.8, 3];
+      var array1 = ["a", "b", 1.5, 7.8, 1];
+      var array2 = ["d", 100, 102, 104, 200];
+
+      var combineArray = array.concat(array1, array2);
+      combineArray = [...array, ...array1, ...array2];
+      // value = value.slice(4);
+
+      /*combineArray.forEach(function (value, index) {
+        console.log(value);
+      });*/
+
+      /*for (var index in combineArray) {
+        console.log(combineArray[index]);
+      }*/
+
+      /*for (var value of combineArray) {
+        console.log(value);
+      }*/
+
+      //var joinString = combineArray.join("-");
+
+      // var urlText = "Array And Logic In Javascript";
+      //urlText = urlText.toLowerCase().split(" ").join("-");
+      //console.log(urlText);
+
+      //var sort = array.sort();
+      // var sort = array.sort().reverse();
+
+      var stringArray = ["z", "D", "a", "k"];
+      //stringArray = stringArray.sort();
+
+      stringArray = stringArray.sort(function (a, b) {
+        console.log(a, b);
+        if (a.toLowerCase() < b.toLowerCase()) return -1;
+        if (a.toLowerCase() > b.toLowerCase()) return 1;
+        return 0;
+      });
+      console.log(stringArray);
+    </script>
+  </body>
+</html>

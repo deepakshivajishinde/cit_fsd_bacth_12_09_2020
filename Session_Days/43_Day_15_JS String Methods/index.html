@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      table {
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid;
+        padding: 5px 10px;
+      }
+      div {
+        margin-top: 10px;
+      }
+      .delete {
+        background-color: rgb(255, 77, 77);
+        font-weight: bold;
+        color: white;
+        padding: 2px 15px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- <form action="">
+      <fieldset>
+        <legend>Student Registration</legend>
+
+        <div>
+          <input type="text" placeholder="Student Name" id="idStudentName" />
+        </div>
+        <div>
+          <input
+            type="text"
+            placeholder="Student Mobile"
+            id="idStudentMobileNo"
+          />
+        </div>
+        <div>
+          <label for="">Is a Student</label>
+          <input
+            type="radio"
+            placeholder=""
+            name="isAStudent"
+            id="isAStudentY"
+          />
+          <label for="isAStudentY">Yes </label>
+          <input
+            type="radio"
+            placeholder=""
+            name="isAStudent"
+            id="isAStudentN"
+            checked
+          />
+          <label for="isAStudentN">No</label>
+        </div>
+        <div>
+          <input type="number" id="idStudentMarks" />
+        </div>
+        <div>
+          <button id="idBtnAddStudent">Add A Student</button>
+        </div>
+      </fieldset>
+    </form> -->
+    <select name="" id="searchValue">
+      <option value="1">True</option>
+      <option value="0">False</option>
+    </select>
+    <table>
+      <thead>
+        <tr>
+          <th>Sr No</th>
+          <th>Name</th>
+          <th>Mobile</th>
+          <th>Is Student</th>
+          <th>Marks</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <script>
+      var tbody = document.getElementById("tbody");
+      var searchValue = document.getElementById("searchValue");
+      var studentArray = [
+        {
+          name: "Umesh",
+          mobile: 8007070845,
+          is_student: false,
+          marks: 84,
+        },
+        {
+          name: "Monali",
+          mobile: 8007874574,
+          is_student: true,
+          marks: 74,
+        },
+        {
+          name: "Subhangi",
+          mobile: 8782470845,
+          is_student: false,
+          marks: 64,
+        },
+        {
+          name: "Nikhil",
+          mobile: 8004512725,
+          is_student: true,
+          marks: 74,
+        },
+      ];
+      /* var studentName = studentArray.map(function (value) {
+        return { name: "Jr. " + value.name };
+      });*/
+      ///var search = true;
+
+      function searchStudent(searchValue) {
+        return studentArray.filter(function (value) {
+          return value.is_student == searchValue ? value : null;
+        });
+      }
+
+      function printList(searchValue) {
+        var array = searchStudent(searchValue);
+        var _tr = "";
+        array.map(function (value, index) {
+          value.name = value.name;
+          _tr += `<tr>
+                    <td>${index + 1}</td>
+                    <td>${value.name}</td>
+                    <td>${value.mobile}</td>
+                    <td>${value.is_student == true ? "Yes" : "No"}</td>
+                    <td>${value.marks}</td>
+                    <td><button class="delete" onclick="deleteStudent(this,event,${index})">Delete</button></td>
+                </tr>`;
+        });
+
+        tbody.innerHTML = _tr;
+      }
+
+      searchValue.addEventListener("change", function () {
+        var value = this.value == "1" ? true : false;
+        tbody.innerHTML = "";
+        printList(value);
+      });
+    </script>
+  </body>
+</html>

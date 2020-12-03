@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var myDate = "25-10-2020";
+      myDate = myDate.split("-");
+      console.log(myDate);
+
+      //var date = new Date(myDate[2], myDate[1] - 1, myDate[0], 23, 45, 59);
+      var date = new Date(1000000000000);
+      //var months = ['Jan','Feb'....]
+      print(date);
+      var dateData = date.getFullYear();
+      dateData = date.getMonth();
+      dateData = date.getDay();
+      dateData = date.getDate();
+      dateData = date.toDateString();
+      print(dateData);
+      function print(printData) {
+        console.log(printData);
+      }
+    </script>
+  </body>
+</html>

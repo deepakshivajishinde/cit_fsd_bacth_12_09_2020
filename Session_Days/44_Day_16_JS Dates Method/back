@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      table {
+        margin-top: 20px;
+        width: 75%;
+        text-align: center;
+        border-collapse: collapse;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <form action="">
+      <input
+        type="text"
+        value=""
+        id="input-id-1"
+        name="Username"
+        placeholder="Enter Student Name"
+      />
+      <button id="btnIdSubmitStudent">CLICK</button>
+    </form>
+    <table>
+      <caption>
+        Student List
+      </caption>
+      <thead>
+        <tr>
+          <th>Sr No</th>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody id="tbody-id"></tbody>
+    </table> -->
+    <script>
+
+
+      
+      /*var input = document.getElementById("input-id-1");
+      var btnIdSubmitStudent = document.getElementById("btnIdSubmitStudent");
+      var tbody = document.getElementById("tbody-id");
+
+      var studentList = [["Umesh", 8007070845, "A+"], "Monali", "Nikhi"];
+
+      function printStudent(sList) {
+        var _tr = "";
+        sList.forEach(function (value, index) {
+          _tr += `
+              <tr>
+                <td>${index + 1}</td>
+                <td>${value}</td>
+              </tr>
+          `;
+        });
+        tbody.innerHTML = _tr;
+      }
+      console.log(studentList);
+      // printStudent(studentList);
+
+      btnIdSubmitStudent.addEventListener("click", function (event) {
+        var _this = this;
+        event.preventDefault();
+        if (input.value === "") {
+          return false;
+        }
+
+        studentList.push(input.value);
+        input.value = "";
+        printStudent(studentList);
+      });*/
+    </script>
+  </body>
+</html>

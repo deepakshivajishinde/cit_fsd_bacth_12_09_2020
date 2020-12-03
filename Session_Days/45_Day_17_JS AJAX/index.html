@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <button onclick="getData()">Click</button>
+  </head>
+  <body>
+    <script>
+      /*var a = "Umesh";
+      function fun() {
+        console.log("Hello ");
+      }
+      function funTwo() {
+        console.log("Hello Two");
+      }
+
+      fun();
+      funTwo();
+      setTimeout(function () {
+        console.log("Callback Function");
+      }, 2000);
+      console.log(a);*/
+      function getData() {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            var data = this.responseText;
+            data = JSON.parse(data);
+            console.log(data);
+          }
+        };
+        xhr.open("GET", "/data.json");
+        xhr.send();
+      }
+    </script>
+  </body>
+</html>
