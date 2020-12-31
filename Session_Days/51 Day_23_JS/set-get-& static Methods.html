@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function CreateCircle(rad) {
+        radius = rad;
+        this.draw = function () {
+          console.log(radius);
+        };
+
+        Object.defineProperty(this, "radius", {
+          get: function () {
+            return radius;
+          },
+          set: function (value) {
+            radius = value;
+          },
+        });
+      }
+
+      CreateCircle.createCircle = function (rad) {
+        return new CreateCircle(rad);
+      };
+
+      var circle = CreateCircle.createCircle(50);
+      console.log(circle.radius);
+      circle.radius = 70;
+      circle.draw();
+    </script>
+  </body>
+</html>

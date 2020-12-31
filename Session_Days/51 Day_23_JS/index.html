@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function CreateCircle(rad) {
+        this.radius = rad;
+        this.draw = function () {
+          console.log(this.radius);
+        };
+      }
+
+      CreateCircle.prototype.createC = function () {
+        console.log("Circle is create: " + this.radius);
+      };
+
+      var circle = new CreateCircle(50);
+      circle.createC();
+    </script>
+  </body>
+</html>

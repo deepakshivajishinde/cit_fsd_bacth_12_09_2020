@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function extend(Child, Parent) {
+        Child.prototype = Object.create(Parent.prototype);
+        Child.prototype.constructor = Child;
+      }
+      function Shape() {}
+      Shape.prototype.draw = function () {
+        console.log("Shape Draw");
+      };
+      function Circle() {
+        this.radius = 2;
+      }
+
+      extend(Circle, Shape);
+      var circle = new Circle();
+      circle.draw();
+
+      function Rectangle() {
+        this.width = 10;
+        this.height = 5;
+      }
+
+      extend(Rectangle, Shape);
+      var rectangle = new Rectangle();
+      rectangle.draw();
+    </script>
+  </body>
+</html>

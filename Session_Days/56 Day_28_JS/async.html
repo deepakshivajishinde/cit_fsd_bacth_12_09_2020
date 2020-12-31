@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //promises
+      //fetch
+      //async
+      //await
+
+      //ajax
+      function functionA(a, b) {
+        return new Promise(function (resolve, reject) {
+          a += b;
+          resolve(a);
+        });
+      }
+
+      function functionB(a) {
+        return new Promise(function (resolve, reject) {
+          a = a * 3.14;
+          resolve(a);
+        });
+      }
+
+      function functionC(a) {
+        return new Promise(function (resolve, reject) {
+          a = a - 5;
+          resolve(a);
+        });
+      }
+
+      function functionD(a, divValue) {
+        return new Promise(function (resolve, reject) {
+          if (divValue == 0) {
+            reject("Divide By Zero");
+          } else {
+            a = a / divValue;
+            resolve(a);
+          }
+        });
+      }
+
+      async function calculation(a, b) {
+        var result = 0;
+        result = await functionA(a, b);
+        result = await functionD(result, 0);
+        result = await functionB(result);
+        result = await functionC(result);
+        return result;
+      }
+
+      calculation(20, 4)
+        .then(function (result) {
+          console.log(result);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    </script>
+  </body>
+</html>

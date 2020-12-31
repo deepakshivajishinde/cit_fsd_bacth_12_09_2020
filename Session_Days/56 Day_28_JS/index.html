@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //promises
+      //fetch
+      //async
+      //await
+
+      //ajax
+      async function callUser() {
+        var result = await fetch("/user.json");
+        return result.text();
+      }
+
+      callUser().then(function (result) {
+        console.log(result);
+      });
+    </script>
+  </body>
+</html>

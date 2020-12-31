@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // var obj = new Object();
+      var obj = {};
+
+      var studentDetails = {
+        studentBasicInfo: {
+          name: "Deepak",
+          rollNo: 23,
+        },
+        addNewStudent: function () {
+          console.log(this.studentBasicInfo);
+        },
+      };
+
+      // studentDetails.removeStudent = "Om";
+
+      var propName = ["updateStudent", "removeStudent"];
+
+      /* for (const value of propName) {
+        studentDetails[value] = null;
+      }*/
+      //studentDetails.removeStudent = "hello";
+
+      console.log(studentDetails);
+    </script>
+  </body>
+</html>

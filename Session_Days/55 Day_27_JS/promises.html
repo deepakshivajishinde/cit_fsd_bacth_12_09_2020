@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //promises
+      //fetch
+      //async
+      //await
+
+      //ajax
+      function functionA(a, b) {
+        return new Promise(function (resolve, reject) {
+          a += b;
+          resolve(a);
+        });
+      }
+
+      function functionB(a) {
+        return new Promise(function (resolve, reject) {
+          a = a * 3.14;
+          resolve(a);
+        });
+      }
+
+      function functionC(a) {
+        return new Promise(function (resolve, reject) {
+          a = a - 5;
+          resolve(a);
+        });
+      }
+
+      function functionD(a, divValue) {
+        return new Promise(function (resolve, reject) {
+          if (divValue == 0) {
+            reject("Divide By Zero");
+          } else {
+            a = a / divValue;
+            resolve(a);
+          }
+        });
+      }
+
+      /*functionA(20, 4, function (result_1) {
+        functionB(result_1, function (result_2) {
+          functionC(result_2, function (result_3) {
+            functionD(result_3, function (result_4) {
+              console.log(result_4);
+            });
+          });
+        });
+      });*/
+      functionA(20, 4)
+        .then(function (result_1) {
+          return functionD(result_1, 0);
+        })
+        .then(function (result_2) {
+          return functionC(result_2);
+        })
+        .then(function (result_3) {
+          return functionB(result_3);
+        })
+        .then(function (result_4) {
+          return functionB(result_1);
+          console.log(result_4);
+        })
+        .catch(function (error) {
+          console.log("Error:" + error);
+        });
+    </script>
+  </body>
+</html>

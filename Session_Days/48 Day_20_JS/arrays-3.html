@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="list"></ul>
+    <script>
+      var array = [1, 12, 5, 3];
+      var array1 = ["a", "b", 1.5, 7.8, 1];
+      var array2 = ["d", 100, 102, 104, 200];
+      var list = document.getElementById("list");
+      var combineArray = [...array, ...array1, ...array2];
+
+      var tag = combineArray
+        .filter(function (element) {
+          return !isNaN(element);
+        })
+        .map(function (element) {
+          var squareNumber = element * element;
+          return `<li>${element} number square is ${squareNumber.toFixed(2)}</li>`;
+        });
+      list.innerHTML = tag.join("");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Shape() {
+        this.width = 10;
+        this.height = 5;
+      }
+      Shape.prototype.draw = function (value) {
+        this.width += value;
+      };
+
+      function Rectangle() {
+        Shape.call(this);
+      }
+
+      Rectangle.prototype = Object.create(Shape.prototype);
+      Rectangle.prototype.constructor = Rectangle;
+
+      Rectangle.prototype.draw = function () {
+        Shape.prototype.draw.call(this, 10);
+        var mult = this.width * this.height;
+        console.log(mult);
+      };
+
+      var rectangle = new Rectangle();
+      rectangle.draw();
+
+      function Circle() {
+        Shape.call(this);
+      }
+      Circle.prototype = Object.create(Shape.prototype);
+      Circle.prototype.constructor = Circle;
+
+      Circle.prototype.draw = function () {
+        var mult = this.width * this.height;
+        console.log(mult);
+      };
+
+      var circle = new Circle();
+      circle.draw();
+    </script>
+  </body>
+</html>
