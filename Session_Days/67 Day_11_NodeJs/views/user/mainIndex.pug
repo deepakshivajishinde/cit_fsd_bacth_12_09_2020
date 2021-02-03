@@ -1,0 +1,19 @@
+doctype html
+html
+    head
+        title User Page
+    body
+        h1 Hello user #{userInfo.name} #{userInfo.mobile}
+        table
+            thead
+                tr
+                    th Sr.No
+                    th Subject Name
+                    th Marks Gain
+            tbody
+                each subject,index in userInfo.subject
+                    - var marksGain = `${subject.marks}/${subject.maxMarks}`;
+                    tr
+                        td #{index + 1}
+                        td #{subject.name}
+                        td #{marksGain}
