@@ -1,0 +1,20 @@
+extends layout
+block content
+    table.table
+        thead
+            tr
+                th Sr.No
+                th Product Name
+                th Product Brand
+                th Product Prices
+                th Action
+        tbody
+            each product,index in prod_list
+                tr
+                    td #{index + 1}
+                    td #{product.pl_name}
+                    td #{product.pl_brand}
+                    td #{product.pl_price}
+                    td.action 
+                        button.edit Edit
+                        button.delete Delete 
