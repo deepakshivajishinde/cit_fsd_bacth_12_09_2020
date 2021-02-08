@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  form(action="/product/update-data" method="post")
+    fieldset
+      legend Update Product
+      div
+        label(for="") Product Name
+        input(type="text", name="productName" placeholder="Enter Details" value=update_pro.pl_name required)
+      div
+        label(for="") Brand Name
+        input(type="text" name="brandName" placeholder="Enter Details" value=update_pro.pl_brand  required)
+      div
+        label(for="") Product Price
+        input(type="number", name="productPrice" placeholder="Enter Details" value=update_pro.pl_price required)
+      div
+        button Update Details

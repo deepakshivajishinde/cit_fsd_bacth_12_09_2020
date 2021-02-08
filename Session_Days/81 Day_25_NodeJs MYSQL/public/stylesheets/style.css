@@ -1,0 +1,54 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00b7ff;
+}
+
+input {
+  margin-left: 10px;
+}
+div {
+  margin-top: 10px;
+}
+
+.table {
+  width: 50%;
+  border-collapse: collapse;
+  margin: auto;
+}
+
+.table th,
+td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.table .action .delete {
+  margin-left: 5px;
+  padding: 5px 10px;
+  outline: 0px;
+  border: 0;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.7s;
+}
+
+.table .action .delete:hover,
+.edit:hover {
+  transform: scale(1.05);
+}
+
+.table .action .edit {
+  padding: 5px 10px;
+  outline: 0px;
+  border: 0;
+  background-color: rgb(89, 207, 89);
+
+  cursor: pointer;
+  transition: transform 0.7s;
+}

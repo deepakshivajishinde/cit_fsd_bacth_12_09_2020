@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  a(href="/product/list") View Product List
+  form(action="/product/save-data" method="post")
+    fieldset
+      legend Add New Product
+      div
+        label(for="") Product Name
+        input(type="text", name="productName" placeholder="Enter Details" required)
+      div
+        label(for="") Brand Name
+        input(type="text" name="brandName" placeholder="Enter Details" required)
+      div
+        label(for="") Product Price
+        input(type="number", name="productPrice" placeholder="Enter Details" required)
+      div
+        button Save Details
+
+
+
